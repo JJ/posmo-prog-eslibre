@@ -114,19 +114,56 @@
 
                 <section>
                     <section>
-                        <h1>El futurismo desarrolla un nuevo lenguaje</h1>
+                        <h1>El futurismo desarrolla nuevos lenguajes</h1>
+
+                        <img src="img/depero-festa-della-sedia.png" alt="Depero, festa della sedia">
+
                         <aside class="notes">Es una reacción a los "monumentos",
                     a las "academias", a todo lo establecido. Crea una serie de
                             manifiestos con una serie de ideas.</aside>
                     </section>
 
-                    <section><h1>Incorporar el entorno</h1>
-                    <aside class="fragment">Como predica el futurismo, el
+                    <section><h1>Que incorporan el entorno</h1>
+                        
+                    <aside class="fragment">En el cuadro anterior, el marco está
+                    en el cuadro; en el cuadro de Goncharova y en muchos cuadros
+                    futuristas, el paisaje y las máquinas que lo cruzan son la
+                    misma cosa; la ciudad y el interior de la casa se
+                    confunden. Como predica el futurismo, el
                     entorno en el que funcionan los lenguajes debe incorporar el
                         entorno social y económio: multihebras, todo
                         eso.</aside>
-                </section>
+                    </section>
 
+                    <section><h1>Entorno actual de desarrollo</h1>
+                        <h2 class="fragment">Web, concurrencia, distribuida</h2>
+                    </section>
+
+                    <section><h1>Elm: nacido para webear</h1>
+                        <pre><code data-line-numbers="1-4|9,13,17|6|17-20">import Browser
+import Html exposing (Html, Attribute, div, input, text)
+import Html.Attributes exposing (..)
+import Html.Events exposing (onInput)
+
+main = Browser.sandbox { init = init, update = update, view = view }
+
+type alias Model =  { que : String  }
+
+init : Model
+init = { que = "" }
+type Msg = Change String
+
+update : Msg -> Model -> Model
+update msg modelo =
+  case msg of
+    Change donde -> { modelo | que = donde }
+
+view : Model -> Html Msg
+view modelo =  div []
+    [ input [ placeholder "Que", value modelo.que, onInput Change ] []
+    , div [] [ text (if modelo.que == "Rock" then "en Samil" else "de qué") ]
+    ]</code></pre>
+                    </section>
                 <section><h1>Abrirse al entorno</h1>
                     <aside class="notes">deno incorpora deno deploy, muchos
                     pueden generar documentación web, otros usar github
