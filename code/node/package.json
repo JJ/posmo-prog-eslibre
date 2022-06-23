@@ -1,0 +1,19 @@
+{
+  "name": "rock-en-samil",
+  "version": "0.0.1",
+  "description": "Rock en Samil",
+  "main": "src/rock-en-samil.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/rock.test.js"
+  },
+  "keywords": [
+    "Siniestro",
+    "Total",
+    "Vigo"
+  ],
+  "author": "JJ Merelo",
+  "license": "ISC"
+}
