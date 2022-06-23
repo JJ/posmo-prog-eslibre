@@ -233,7 +233,28 @@ serve( (req) => {
                 son estas líneas, que usan como rutas frases de la canción "Rock
                         en Samil", de Siniestro total</aside>
                 </section>
-                
+
+                <section><h1>Incorporando el paralelismo en Julia</h1>
+                    <pre><code data-line-numbers="5|5-8">function time_mutations(number,length)
+    inicioTiempo = time()
+
+    fitness = @distributed for i in 0:1:number
+        indi = random_chromosome(length)
+        reduce( +, indi)
+    end
+    println(fitness)
+    time()-inicioTiempo
+
+end</code></pre>
+
+                    <aside class="notes">En forma de macros, Julia permite
+                paralelizar fácilmente con el número de procesadores que se
+                        hagan disponibles al intérprete, usando el flag
+                        -p</aside>
+                </section>
+                </section>
+
+                <section>
                 <section><h1>Abrirse al entorno</h1>
                     <aside class="notes">deno incorpora deno deploy, muchos
                     pueden generar documentación web, otros usar github
