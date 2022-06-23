@@ -5,4 +5,4 @@ import { rock, vamosABailar } from "../src/rock-en-samil.js";
 
 test("Rock", () => {
     assert.equal( rock(), "En Samil" );
-}
+});
