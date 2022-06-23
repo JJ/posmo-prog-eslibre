@@ -15,5 +15,6 @@
     "Vigo"
   ],
   "author": "JJ Merelo",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module"
 }
