@@ -189,6 +189,37 @@ view modelo =  div []
                     correspondiente, son un par de indicaciones.</aside>
                 </section>
 
+                <section><h1>El mundo es web</h1>
+                    <pre><code data-line-numbers="1,2|4-15|17-22|4,14,18">import { serve } from "https://deno.land/std@0.144.0/http/server.ts";
+import { h, renderSSR } from "https://deno.land/x/nano_jsx@v0.0.32/mod.ts";
+
+function App(url) {
+    let pachanga;
+    const thisUrl = new URL( url.children[0] );
+    switch (thisUrl.pathname) {
+      case "/silbo" : pachanga="Rockabilly"; break;
+      case "/rock" : pachanga="En Samil"; break;
+      case "/vitrasa" : pachanga="Hacia Samil"; break;
+      default: pachanga="Diga qué le debo";
+    }
+    return ( <html> <head> <title>Qué pasa por la calle</title></head>
+                        <body> <h1>{pachanga}</h1> </body> </html> );
+}
+
+serve( (req) => {
+    const html = renderSSR(<App>{req.url}</App>);
+    return new Response(html, {  headers: {  "content-type": "text/html; charset=utf-8",  }, });
+});</code></pre>
+
+                    <aside class="notes">deno no es tanto un lenguaje como un
+                framework que interpreta javascript y typescript en un sandbox
+                con políticas estrictas; por eso se ha lanzado deno deploy, un
+                servicio en la nube que permite desplegar fácilmente "javascript
+                containers". Lo único que hace falta para crear un servicio web
+                son estas líneas, que usan como rutas frases de la canción "Rock
+                        en Samil", de Siniestro total</aside>
+                </section>
+                
                 <section><h1>Abrirse al entorno</h1>
                     <aside class="notes">deno incorpora deno deploy, muchos
                     pueden generar documentación web, otros usar github
