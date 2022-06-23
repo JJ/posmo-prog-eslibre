@@ -1,0 +1,15 @@
+name: "Check node"
+on:
+  push:
+    paths: "code/node/**"
+
+jobs:
+  check_node:
+    steps:
+      - uses: actions/checkout@v3
+        - uses: actions/setup-node@v3
+          with:
+            node-version: 18
+        - name: Node test
+          working-directory: code/node
+          run: npm test
