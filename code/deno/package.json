@@ -1,0 +1,17 @@
+{
+  "name": "rock-en-samil",
+  "version": "0.0.1",
+  "description": "Testeando deno deploy",
+  "main": "rock-en-samil.jsx",
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "deno run --allow-net rock-en-samil.jsx"
+  },
+  "keywords": [
+    "deno",
+    "siniestro",
+    "total"
+  ],
+  "author": "JJ Merelo",
+  "license": "ISC"
+}
