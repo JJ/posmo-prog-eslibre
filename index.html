@@ -241,7 +241,8 @@ serve( (req) => {
 
                 </section>
 
-		<section><h1>Si no se testea, no funciona</h1>
+		<section>
+		  <h1>Si no se testea, no funciona</h1>
 		  <h2 class='fragment'>Tests unitarios forman parte del lenguaje</h2>
 
 		  <aside class='notes'>El lenguaje se abre al entorno, facilitando prácticas habituales dentro del desarrollo actual; node 18 incluye tests unitarios, y otros muchos lenguajes como Raku incluyen una biblioteca de aserciones dentro de su librería básica.</aside>
@@ -255,7 +256,25 @@ serve( (req) => {
 		  <h2 class=''>Integración continua, contenedores, gestores de tareas.</h2>
 		</section>
 
-		<section><h1>Stackoverflow <em>es</em> la documentación de muchos lenguajes</h1></section>
+		<section><h1>Los lenguajes <em>seguros</em> se cierran
+		    al entorno</h1>
+		  <pre><code>deno run --allow-net rock-en-samil.ts </code></pre>
+		  <aside class='notes'>Pero con ello reconocen que la
+		  seguridad es una de las preocupaciones del propio
+		  lenguaje, no algo que tiene que añadirse a
+		  continuación, y los lenguajes se "abren" a tener
+		  características de seguridad desde el
+		  principio. Rust, por ejemplo, tiene un enfoque
+		    similar desde el punto de vista de la sintaxis.</aside>
+		</section>
+		
+		<section><h1>Stackoverflow <em>es</em> la
+		    documentación de muchos lenguajes</h1></section>
+
+		<section><h1>Los lenguajes posmodernos son
+		    multi-paradigma</h1>
+
+		</section>
 
 		<section><h1>Los lenguajes posmodernos se abren al entorno</h1>
 		  <h2 class='fragment'>Comunidad, documentación,
@@ -265,6 +284,7 @@ serve( (req) => {
 		  intérprete o compilador que sirva para ejecutar el
 		    programa, más allá de su sintaxis</aside>
 		</section>
+
 
 		<section><h1>Perl fue el primer lenguaje posmoderno</h1>
 		  <h2 class='fragment'>La cebolla es su símbolo</h2>
