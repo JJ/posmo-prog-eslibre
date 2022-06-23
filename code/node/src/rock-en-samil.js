@@ -9,5 +9,4 @@ export function vamosABailar( elQué ) {
     } else {
 	return "Rock and Roll Toda la Noche Hasta Que Caiga El Sol"
     }
-    
 }
