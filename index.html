@@ -15,33 +15,33 @@
 	<link rel="stylesheet" href="plugin/highlight/monokai.css">
     </head>
     <body>
-	<div class="reveal">
-	    <div class="slides">
-		<section data-background="https://upload.wikimedia.org/wikipedia/commons/0/02/Fortunato_Depero_Il_motociclista.jpg"><h1>Lenguajes de programación posmodernos</h1>
-                    <h2>Cómo y qué aprender a programar en el siglo XXI</h2>
-                    <h3>esLibre, Xouba City, 2022</h3>
-                </section>
+      <div class="reveal">
+	<div class="slides">
+	  <section data-background="https://upload.wikimedia.org/wikipedia/commons/0/02/Fortunato_Depero_Il_motociclista.jpg"><h1>Lenguajes de programación posmodernos</h1>
+            <h2>Cómo y qué aprender a programar en el siglo XXI</h2>
+            <h3>esLibre, Xouba City, 2022</h3>
+          </section>
 
-		<section data-background="https://live.staticflickr.com/65535/52160955963_2c1c216100_k_d.jpg">
-                    <h1>Servidor</h1>
-                    <h2 class="fragment">Programador desde 1983</h2>
-                    <h3 class="fragment">💝 Raku <small>💝</small> Perl,
-                        Javascript, Python...</h3>
-                    <h3 class="fragment">Profe <a href="https://ugr.es">UGR</a> + ingeniero software senior @ <a href="https://polypoly.com">polypoly</a></h3>
-                </section>
+	  <section data-background="https://live.staticflickr.com/65535/52160955963_2c1c216100_k_d.jpg">
+            <h1>Servidor</h1>
+            <h2 class="fragment">Programador desde 1983</h2>
+            <h3 class="fragment">💝 Raku <small>💝</small> Perl,
+              Javascript, Python...</h3>
+            <h3 class="fragment">Profe <a href="https://ugr.es">UGR</a> + ingeniero software senior @ <a href="https://polypoly.com">polypoly</a></h3>
+          </section>
 
-                <section><h1>Un lenguaje para dominarlos a todos</h1>
-                    <img src="img/lenguajes-polypoly.png" class="fragment"
-                         alt="lenguajes polypoly">
-                    <h2 class="fragment">... no ni ná</h2>
+          <section><h1>Un lenguaje para dominarlos a todos</h1>
+            <img src="img/lenguajes-polypoly.png" class="fragment"
+                 alt="lenguajes polypoly">
+            <h2 class="fragment">... no ni ná</h2>
 
-                    <aside class="notes">Este es el repo de polypoly,
+            <aside class="notes">Este es el repo de polypoly,
                 posiblemente uno bastante típico de un app, donde se emplean
                 multitud de lenguajes para incluir en la propia app y para
                 programar las herramientas de desarrollo necesarias para
                 eso. También habría que incluir aquí Rust y Python, así como
                         otros DSL como YAML, Groovy (que se usa en Gradle) y Makefiles.</aside>
-                </section>
+          </section>
 
                 <section data-background="https://live.staticflickr.com/65535/51373111260_a7a0867359_k_d.jpg">
                     <h1>La postmodernidad nos rodea</h1>
@@ -184,7 +184,7 @@ view modelo =  div []
                         <pre id="elm"></pre>
                     </section>
 
-                <section><h1>El lenguaje moldea el pensamiento</h1>
+                    <section><h1>El lenguaje moldea el pensamiento</h1>
                     <pre><code>say (١,١,* + *...∞)[١..٣٣].trans( [0..9] => ['٠'..'٩'] )</code></pre>
 
                     <pre><code>١ ٢ ٣ ٥ ٨ ١٣ ٢١ ٣٤ ٥٥ ٨٩ ١٤٤ ٢٣٣ ٣٧٧ ٦١٠ ٩٨٧ ١٥٩٧ ٢٥٨٤ ٤١٨١ ٦٧٦٥ ١٠٩٤٦ ١٧٧١١ ٢٨٦٥٧ ٤٦٣٦٨ ٧٥٠٢٥ ١٢١٣٩٣ ١٩٦٤١٨ ٣١٧٨١١ ٥١٤٢٢٩ ٨٣٢٠٤٠ ١٣٤٦٢٦٩ ٢١٧٨٣٠٩ ٣٥٢٤٥٧٨ ٥٧٠٢٨٨٧</code></pre>
@@ -226,14 +226,14 @@ serve( (req) => {
 });</code></pre>
 
                     <aside class="notes">deno no es tanto un lenguaje como un
-                framework que interpreta javascript y typescript en un sandbox
+                framework que interpreta javascript y typescript en un sandb
                 con políticas estrictas; por eso se ha lanzado deno deploy, un
                 servicio en la nube que permite desplegar fácilmente "javascript
                 containers". Lo único que hace falta para crear un servicio web
                 son estas líneas, que usan como rutas frases de la canción "Rock
                         en Samil", de Siniestro total</aside>
                 </section>
-                
+
                 <section><h1>Abrirse al entorno</h1>
                     <aside class="notes">deno incorpora deno deploy, muchos
                     pueden generar documentación web, otros usar github
@@ -241,14 +241,39 @@ serve( (req) => {
 
                 </section>
 
-                </section>
+		<section><h1>Si no se testea, no funciona</h1>
+		  <h2 class='fragment'>Tests unitarios forman parte del lenguaje</h2>
 
+		  <aside class='notes'>El lenguaje se abre al entorno, facilitando prácticas habituales dentro del desarrollo actual; node 18 incluye tests unitarios, y otros muchos lenguajes como Raku incluyen una biblioteca de aserciones dentro de su librería básica.</aside>
+		</section>
+
+		<section><h1>Los objetos <em>se abren</em> al entorno</h1>
+		  <h2 class='fragment'><code>console</code>, <code>IndexedDB</code></h2>
+		</section>
+
+		<section><h1>Los proyectos no se hacen en un solo lenguaje</h1>
+		  <h2 class=''>Integración continua, contenedores, 
                 <section><h1>No al lenguaje único❢</h1>
                     <img src="img/monumento-nazionale.png" alt="Capítulo 5
                     boccioni, Contro l'ossessione della cultura e contro il
                               monumento nazionale">
                 </section>
 
+		<section><h1>Stackoverflow <em>es</em> la documentación de muchos lenguajes</h1></section>
+
+		<!-- Conclusiones (más o menos) -->
+		<section><h1>No existe un solo lenguaje podmoderno</h1>
+		</section>
+
+		<section><h1>Es imposible aprender con un solo lenguaje</h1>
+		</section>
+
+		<section><h1>Ni siquiera se puede aprender un lenguaje usando un solo lenguaje</h1></section>
+		
+		<section><h1>El desarrollo posmoderno deconstruye</h1>
+		  <h2 class='fragment'>Las aplicaciones tienen que ser examinadas, testeadas, compiladas, desplegadas...</h2>
+		</section>
+		
                 <section><h1>*Flame wars* de lenguajes</h1>
                     <h2 class="fragment">¿Para qué sirven?</h2>
                 </section>
