@@ -249,10 +249,13 @@ serve( (req) => {
                         allows you to easily deploy <em>javascript
                         containers</em>. You only need these lines to create a
                         web service, that use as routes sentences from "Rockaway
-                        beach" by The Ramones.</aside>
+                        beach" by The Ramones.
+                        This is already deployed in <a
+                        href="https://tidy-cow-34-cfmzqrv2pcjg.deno.dev/rock">Here,
+                        for instance</a></aside>
                 </section>
 
-                <section><h1>Environment is parallel: Paralellism in Julia</h1>
+                <section><h1>Environment is parallel: Julia obliges</h1>
                     <pre><code data-line-numbers="4|4-7">function time_mutations(number,length)
     inicioTiempo = time()
 
@@ -282,15 +285,30 @@ end</code></pre>
 		  <section>
 		    <h1>If not tested, it does not work</h1>
 		    <h2 class='fragment'>Unit tests part of the language</h2>+
-		    <pre><code data-line-numbers="1,2|5-8"></code></pre>
+		    <pre><code data-line-numbers="1|5|7,8,10,11">use Test;
+
+use Data::UkraineWar::MoD::Scrape;
+
+#| Fixture with the raw data set scraped from pages
+my $war-data = Data::UkraineWar::MoD::Scrape.new( "raw-pages/" );
+
+subtest "CSV works", {
+    ok($war-data, "Ukraine data loaded");
+    my $csv-output = $war-data.CSV();
+    ok($csv-output, "Returns CSV correctly");
+    is($csv-output.lines()[*- 1].split(", ").elems, 4, "CSV rows correct");
+};
+                    </code></pre>
 
 		  <aside class='notes'>Language open itself to the environment,
 		  making easier best practices within current environment; node
 		  18 includes unit tests, and Raku even includes an assertion
-		  library as part of the most common (and so far only) interpreter</aside>
+		  library as part of the most common (and so far only)
+		  interpreter. Python also includes a very basic assertion
+		  command (part of the language) and an UnitTest library</aside>
 		  </section>
 
-		  <section><h1>Los objetos <em>se abren</em> al entorno</h1>
+		  <section data-background="img/balla-espansione-dinamica.png"><h1>Objects <em>open</em> to the environment</h1>
 		  <h2 class='fragment'><code>console</code>, <code>IndexedDB</code></h2>
 		  </section>
 
