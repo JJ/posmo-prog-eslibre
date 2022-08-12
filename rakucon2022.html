@@ -107,7 +107,7 @@
                 </section>
 
                 <section>
-                    <section><h1>Let's talk about futurism</h1>
+                    <section><h1>And futurism was first</h1>
                     <img src="img/severini-cannoni-in-azione.png" alt="Severini,
                     canoni in azioni">
 
@@ -118,7 +118,7 @@
                     </aside>
                     </section>
 
-                    <section><h1>Embraces sculture, painting, motion pictures</h1>
+                    <section><h1>Embraces sculpture, painting, motion pictures</h1>
                         <img src="img/goncharova-landscape-with-a-train.png"
                         alt="Goncharova: Paisaje con un tren">
 
@@ -134,9 +134,11 @@
                             the totalitarian bend of Italian futurism.</aside>
                     </section>
 
-                    <section><h1>Am I going to talk a lot about this?</h1>
-                        <aside class="notes">You're raving for me to talk about
-                        Raku, but let's continue a bit with this.</aside>
+                    <section>
+                        <h1>📓 Postmodernist languages must be a culture</h1>
+                        <aside class="notes">Let's go back to languages for a
+                        brief moment, if only to not bore people with lots of
+                            cultsy stuff</aside>
                     </section>
 
                 </section>
@@ -149,16 +151,12 @@
 
                         <img src="img/depero-festa-della-sedia.png" alt="Depero, festa della sedia">
 
+                        <h2 class="fragment">... that incorporate the <em>environment</em></h2>
                         <aside class="notes">It's a reaction against "monuments"
                     in "Academia", to averything that was established. Creates a
                     series of manifestos, including technical manifestos, that
-                    people can adhere to.</aside>
-                    </section>
-
-                    <section><h1>... that incorporate the <em>environment</em></h1>
-
-                    <aside class="notes">In the previous painting, the frame is
-                    in the paiting itself. In Goncharova's painting and many
+                    people can adhere to. The frame is
+                    in the painting itself. In Goncharova's painting and many
                     others, landscape and machines crossing it are the same
                     thing; city and home interior mix into each other. As
                     futurism says, the environment in which languages work must
@@ -205,35 +203,38 @@ view modelo =  div []
 
                     <pre><code>١ ٢ ٣ ٥ ٨ ١٣ ٢١ ٣٤ ٥٥ ٨٩ ١٤٤ ٢٣٣ ٣٧٧ ٦١٠ ٩٨٧ ١٥٩٧ ٢٥٨٤ ٤١٨١ ٦٧٦٥ ١٠٩٤٦ ١٧٧١١ ٢٨٦٥٧ ٤٦٣٦٨ ٧٥٠٢٥ ١٢١٣٩٣ ١٩٦٤١٨ ٣١٧٨١١ ٥١٤٢٢٩ ٨٣٢٠٤٠ ١٣٤٦٢٦٩ ٢١٧٨٣٠٩ ٣٥٢٤٥٧٨ ٥٧٠٢٨٨٧</code></pre>
 
-                    <aside class="notes">Fibonacci, en el siglo XIII, introdujo
-                    la notación "árabe" que servía para dos cosas: registrar
-                        operaciones <em>y</em> hacer operaciones. Desde
-                    principios de siglo se usa extensivamente Unicode; ¿por qué
-                    no usar los verdaderos números árabes para presentar la
-                    sucesión de Fibonacci? Además, escrita de derecha a
-                        izquierda, como se escribe en árabe. Raku tiene tantos
-                    rasgos posmodernos que sería difícil empezar a enumerarlos,
-                    pero el hecho de que se pueda trabajar con estructuras de
-                        datos infinitas <em>y</em> el número infinito, y que el
-                    propio lenguaje refleje el sentido de escritura del alfabeto
-                    correspondiente, son un par de indicaciones.</aside>
+                    <aside class="notes">In the XIII century, Fibonacci
+                    introduced the "Arab" notation for two different things:
+                        record <em>and</em> perform operations. The so-called
+                    Fibonacci sequence was an example used in one of his
+                    textbooks to show its power (See? We use directly the result
+                    of the operation as part of the next operation!) From the
+                    beginning of the century, Unicode is extensively used. Why
+                    not use the Arab numbers themselves to present the Fibonacci
+                    sequence? Besides, it's written right to left, as in the
+                    true Arab script. Raku has so many post-modern features that
+                    it would be difficult to enumerate all of them, but the fact
+                    that you can deal with (lazy) infinite data structures _and_
+                    the infinite number, and that the language itself reflects
+                    the script direction of the corresponding alphabet are but a
+                        couple of hints</aside>
                 </section>
 
-                <section><h1>El mundo es web</h1>
+                <section><h1>The world is web</h1>
                     <pre><code data-line-numbers="1,2|4-15|17-22|4,14,18">import { serve } from "https://deno.land/std@0.144.0/http/server.ts";
 import { h, renderSSR } from "https://deno.land/x/nano_jsx@v0.0.32/mod.ts";
 
 function App(url) {
-    let pachanga;
+    let beat;
     const thisUrl = new URL( url.children[0] );
     switch (thisUrl.pathname) {
-      case "/silbo" : pachanga="Rockabilly"; break;
-      case "/rock" : pachanga="En Samil"; break;
-      case "/vitrasa" : pachanga="Hacia Samil"; break;
-      default: pachanga="Diga qué le debo";
+      case "/chewing" : beat="Out a rhythm"; break;
+      case "/rock" : beat="Away beach"; break;
+      case "/up" : beat="On the roof"; break;
+      default: beat="Rockaway Beach";
     }
-    return ( <html> <head> <title>Qué pasa por la calle</title></head>
-                        <body> <h1>{pachanga}</h1> </body> </html> );
+    return ( <html> <head> <title>Hey, ho, let's go</title></head>
+                        <body> <h1>{beat}</h1> </body> </html> );
 }
 
 serve( (req) => {
@@ -241,16 +242,17 @@ serve( (req) => {
     return new Response(html, {  headers: {  "content-type": "text/html; charset=utf-8",  }, });
 });</code></pre>
 
-                    <aside class="notes">deno no es tanto un lenguaje como un
-                framework que interpreta javascript y typescript en un sandb
-                con políticas estrictas; por eso se ha lanzado deno deploy, un
-                servicio en la nube que permite desplegar fácilmente "javascript
-                containers". Lo único que hace falta para crear un servicio web
-                son estas líneas, que usan como rutas frases de la canción "Rock
-                        en Samil", de Siniestro total</aside>
+                    <aside class="notes"><code>deno</code> is not so much a
+                        language but a framework that interprets JavaScript and
+                        Typescript in a sandbox with very strict policies; it's
+                        launched <code>deno deploy</code>, a cloud service that
+                        allows you to easily deploy <em>javascript
+                        containers</em>. You only need these lines to create a
+                        web service, that use as routes sentences from "Rockaway
+                        beach" by The Ramones.</aside>
                 </section>
 
-                <section><h1>Incorporando el paralelismo en Julia</h1>
+                <section><h1>Environment is parallel: Paralellism in Julia</h1>
                     <pre><code data-line-numbers="4|4-7">function time_mutations(number,length)
     inicioTiempo = time()
 
@@ -263,39 +265,29 @@ serve( (req) => {
 
 end</code></pre>
 
-                    <aside class="notes">En forma de macros, Julia permite
-                paralelizar fácilmente con el número de procesadores que se
-                        hagan disponibles al intérprete, usando el flag
-                        -p</aside>
+                    <aside class="notes">As macros, Julia enables easy
+                parallelization with the number of cores that are available to
+                        the interpreter using the <code>-p</code> flag</aside>
                 </section>
                 </section>
 
-		<!-- comenzando la siguiente sección -->
+		<!-- What about the environment -->
                 <section>
-                  <section><h1>Abrirse al entorno</h1>
-                    <aside class="notes">deno incorpora deno deploy, muchos
-                    pueden generar documentación web, otros usar github
-                        directament en su ecosistema...</aside>
+                  <section><h1>Opening yourself to the environment</h1>
+                    <aside class="notes">deno including deno deploy, automatic
+                documentation, tests... </aside>
 
                   </section>
 
 		  <section>
 		    <h1>If not tested, it does not work</h1>
 		    <h2 class='fragment'>Unit tests part of the language</h2>+
-                    <h3 class="fragment">Raku ✓</h3>
-		    <pre><code data-line-numbers="1,2|5-8">import test from 'node:test';
-import assert from 'assert/strict';
-import { rock, vamosABailar } from "../src/rock-en-samil.js";
-const elRockDonde = "En Samil";
-test("Rock", () => {
-    assert.equal( rock(),  elRockDonde );
-});
+		    <pre><code data-line-numbers="1,2|5-8"></code></pre>
 
-test("Vamos a bailar", () => {
-    assert.equal( vamosABailar("El Rock"), elRockDonde );
-});</code></pre>
-
-		  <aside class='notes'>El lenguaje se abre al entorno, facilitando prácticas habituales dentro del desarrollo actual; node 18 incluye tests unitarios, y otros muchos lenguajes como Raku incluyen una biblioteca de aserciones dentro de su librería básica.</aside>
+		  <aside class='notes'>Language open itself to the environment,
+		  making easier best practices within current environment; node
+		  18 includes unit tests, and Raku even includes an assertion
+		  library as part of the most common (and so far only) interpreter</aside>
 		  </section>
 
 		  <section><h1>Los objetos <em>se abren</em> al entorno</h1>
